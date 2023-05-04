@@ -1,11 +1,36 @@
 import React from "react";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <section>
-      <div className="size">
+      <div className="size login">
         <h1 className="login-title">Please Login...</h1>
+        <div className="login-form">
+          <form>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email.."
+            />
+            <br />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your email.."
+            />
+            <br />
+            <input type="submit" value="Login" className="login-btn" />
+            <div>
+              <p>
+                New here? <Link to="/register">Create an account</Link>
+              </p>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   );
