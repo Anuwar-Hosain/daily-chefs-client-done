@@ -1,0 +1,30 @@
+.main-banner {
+  background-color: #2980b9;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  padding-top: 56px;
+}
+
+.banner-img {
+  width: 300px;
+}
+.banner-title {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+.banner-para {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+.banner-btn {
+  padding: 10px 16px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

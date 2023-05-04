@@ -1,3 +1,7 @@
+.main-header {
+  background-color: #2980b9;
+}
+
 .size {
   width: 80vw;
   margin: 0 auto;
@@ -6,12 +10,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0;
+}
+.nav-items ul {
+  display: flex;
+  align-items: center;
 }
 .nav-items li {
   list-style: none;
 }
 .nav-items li a {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
   margin-left: 16px;
+  font-size: 18px;
+}
+.chef {
+  color: #ffffff;
+}
+.logo {
+  font-size: 32px;
+  color: #231f20;
 }
