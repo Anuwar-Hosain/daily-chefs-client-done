@@ -8,3 +8,8 @@
 .title-che {
   color: #2980b9;
 }
+.chefs-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
