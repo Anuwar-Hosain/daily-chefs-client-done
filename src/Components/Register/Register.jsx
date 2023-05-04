@@ -1,6 +1,7 @@
 import React from "react";
 import "./Register.css";
 import { Link } from "react-router-dom";
+import { BsGoogle, BsGithub } from "react-icons/bs";
 
 const Register = () => {
   return (
@@ -44,6 +45,16 @@ const Register = () => {
             <br />
             <input type="submit" value="Submit" className="submit-btn" />
           </form>
+        </div>
+        <div className="g-g">
+          <div className="google">
+            <BsGoogle></BsGoogle>
+            <h3>Google</h3>
+          </div>
+          <div className="google">
+            <BsGithub></BsGithub>
+            <h3>Github</h3>
+          </div>
         </div>
       </div>
     </section>

@@ -27,3 +27,21 @@
 .login-new {
   text-align: right;
 }
+.g-g {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px auto;
+}
+.google {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+  width: 360px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}

@@ -1,0 +1,28 @@
+.news {
+  margin: 100px auto;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 48px;
+}
+
+.email-news {
+  width: 400px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px 0 0 5px;
+}
+.news-btn {
+  padding: 10px;
+  outline: none;
+  background: black;
+  color: #ffffff;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.news-title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}

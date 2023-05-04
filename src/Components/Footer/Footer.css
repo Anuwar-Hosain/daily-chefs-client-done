@@ -1,0 +1,27 @@
+.footer-main {
+  background-color: #2980b9;
+}
+.footer {
+  padding: 48px;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+}
+.footer-icon {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+.footer-icon-b {
+  font-size: 24px;
+  color: #ffffff;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.footer-icon-b:hover {
+  color: aqua;
+}
+.logo-footer {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
