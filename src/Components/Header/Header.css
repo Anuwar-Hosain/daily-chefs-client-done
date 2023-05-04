@@ -1,0 +1,17 @@
+.size {
+  width: 80vw;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-items li {
+  list-style: none;
+}
+.nav-items li a {
+  text-decoration: none;
+  color: black;
+  margin-left: 16px;
+}
