@@ -20,15 +20,15 @@ const Login = () => {
               type="password"
               name="password"
               id="password"
-              placeholder="Enter your email.."
+              placeholder="Enter your password.."
             />
-            <br />
-            <input type="submit" value="Login" className="login-btn" />
-            <div>
+            <div className="login-new">
               <p>
                 New here? <Link to="/register">Create an account</Link>
               </p>
             </div>
+            <br />
+            <input type="submit" value="Login" className="login-btn" />
           </form>
         </div>
       </div>

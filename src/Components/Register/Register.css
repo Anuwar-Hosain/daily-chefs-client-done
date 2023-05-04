@@ -11,13 +11,15 @@
   margin-top: 16px;
 }
 #email,
-#password {
+#password,
+#name,
+#photo {
   margin-bottom: 16px;
   padding: 10px;
   outline: none;
   width: 360px;
 }
-.login-btn {
+.submit-btn {
   padding: 10px 16px;
   outline: none;
   cursor: pointer;
