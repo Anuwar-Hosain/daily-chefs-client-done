@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Reviews.css";
-
+import CardReview from "../CardReview/CardReview";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
@@ -9,10 +9,11 @@ const Reviews = () => {
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
-  console.log(reviews);
   return (
-    <section className="size">
-      <h1>reviews</h1>
+    <section className="size review">
+      {reviews.map((review) => (
+        <CardReview review={review} key={review.id}></CardReview>
+      ))}
     </section>
   );
 };

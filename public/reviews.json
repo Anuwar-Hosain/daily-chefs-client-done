@@ -1,13 +1,19 @@
 [
   {
+    "id": "1",
+    "icon": "/public/person.png",
     "name": "Subscriber",
     "review": "30K"
   },
   {
+    "id": "2",
+    "icon": "/public/person.png",
     "name": "Daily Visitor",
     "review": "60k"
   },
   {
+    "id": "3",
+    "icon": "/public/person.png",
     "name": "Daily Book",
     "review": "50/60"
   }
