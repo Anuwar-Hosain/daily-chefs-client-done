@@ -8,3 +8,37 @@
   height: 400px;
   width: 100%;
 }
+.chef-title {
+  font-size: 32px;
+  margin-top: 16px;
+}
+.chef-name {
+  font-size: 24px;
+  margin-top: 16px;
+}
+.chef-ex,
+.chef-re {
+  margin-top: 8px;
+  border-right: 1px solid #2980b9;
+  padding-right: 16px;
+  font-weight: bold;
+}
+.ex-re-li {
+  display: flex;
+  justify-content: space-between;
+}
+.like {
+  margin-right: 10px;
+}
+.btn-view-chef {
+  margin-top: 16px;
+}
+.chef-btn {
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
