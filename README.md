@@ -16,4 +16,4 @@ Chef-দের ডাটা শো করানোর একটি সাইট�
 
 ## live link:
 
-[Live LInk](https://linktodocumentation)
+[Live LInk](https://daily-chefs-client.web.app/)
