@@ -7,6 +7,7 @@ import ActiveLink from "../ActiveLink/ActiveLink";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
+  console.log(user?.email);
 
   const handleLogOut = () => {
     logOut()
@@ -35,7 +36,7 @@ const Header = () => {
               <li>
                 {user && (
                   <Link to="/">
-                    <BsPersonCircle></BsPersonCircle>
+                    <BsPersonCircle title={user?.email}> </BsPersonCircle>
                   </Link>
                 )}
               </li>
