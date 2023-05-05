@@ -4,3 +4,12 @@
   justify-content: center;
   margin-top: -75px;
 }
+@media only screen and (max-width: 600px) {
+  .review {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 56px;
+  }
+}

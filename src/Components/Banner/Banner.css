@@ -36,3 +36,17 @@
   width: 50%;
   text-align: right;
 }
+@media only screen and (max-width: 600px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  .description {
+    width: 100%;
+  }
+  .pic {
+    width: 100%;
+  }
+}
