@@ -40,7 +40,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/data/${params.id}`),
+          fetch(`https://daily-chefs-server.vercel.app/data/${params.id}`),
       },
       {
         path: "*",

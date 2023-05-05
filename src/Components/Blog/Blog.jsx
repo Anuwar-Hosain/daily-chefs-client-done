@@ -1,9 +1,12 @@
 import React from "react";
 import "./Blog.css";
+import Pdf from "react-to-pdf";
+
+const ref = React.createRef();
 
 const Blog = () => {
   return (
-    <section className="size blog">
+    <section ref={ref} className="size blog">
       <h1>Blog</h1>
       <div>
         <h2>
@@ -111,6 +114,11 @@ const Blog = () => {
           can make it easier to reuse code across multiple projects, which can
           save you time and effort in the long run.
         </p>
+      </div>
+      <div className="App">
+        <Pdf targetRef={ref} filename="code-example.pdf">
+          {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
+        </Pdf>
       </div>
     </section>
   );
