@@ -1,6 +1,11 @@
 .chef-details {
   margin: 56px auto;
 }
+.chef-details-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 16px;
+}
 .chef-details-main {
   display: flex;
   gap: 16px;
@@ -9,7 +14,7 @@
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 .chef-pic > img {
-  width: 360px;
+  width: 500px;
 }
 .chef-description {
   display: flex;
@@ -24,4 +29,32 @@
 }
 .check-cards {
   display: flex;
+  gap: 16px;
+}
+.card-check {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.card-check > img {
+  width: 100%;
+}
+.card-check-dis {
+  padding: 10px;
+}
+.card-check-dis > ul > li {
+  list-style: none;
+}
+.margin {
+  margin-top: 16px;
+}
+.bold {
+  font-weight: bolder;
+  font-size: 18px;
+}
+.fav-btn {
+  color: red;
+  cursor: pointer;
+}
+.fav-block {
+  color: rgb(99, 99, 99);
 }

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ChefDetails.css";
 import { useLoaderData } from "react-router-dom";
 import { BsFillHandThumbsUpFill, BsFillHeartFill } from "react-icons/bs";
 
 const ChefDetails = () => {
+  const [favBtn, setFavBtn] = useState(false);
+  console.log(favBtn);
   const chefData = useLoaderData();
   const {
     chef_detail,
@@ -16,9 +18,14 @@ const ChefDetails = () => {
     years_of_experience,
   } = chefData;
   console.log(chefData);
+
+  const handleFavBtn = () => {
+    alert("Added to favorite ");
+    setFavBtn(true);
+  };
   return (
     <section className="size chef-details">
-      <h1>Chef Details:</h1>
+      <h1 className="chef-details-title">Chef Details:</h1>
       <div className="chef-details-main">
         <div className="chef-pic">
           <img src={chef_picture} alt="" />
@@ -34,64 +41,103 @@ const ChefDetails = () => {
               {likes}
             </p>
             <p className="chef-li">
-              <BsFillHeartFill></BsFillHeartFill>
+              <BsFillHeartFill
+                className={favBtn ? "fav-btn" : "fav-block"}
+                onClick={handleFavBtn}
+              ></BsFillHeartFill>
             </p>
           </div>
         </div>
       </div>
       <div className="Chef-recipe">
-        <h1>Check Chef Recipe</h1>
+        <h1 className="chef-details-title">Check Chef Recipe</h1>
         <div className="check-cards">
-          <div className="card">
+          <div className="card-check">
             <img src={viewRecipe.recipe1} alt="" />
-            <h2>Pasta</h2>
-            <p>
-              Executive Chef: This is the top chef in a kitchen, responsible for
-              creating the menu, managing the kitchen staff, ordering supplies,
-              and ensuring that the food is prepared to the highest quality
-              standards.
-            </p>
-            <ul>
-              <li>Step 1: Ingredients</li>
-              <li>Step 2: Weigh the Flour</li>
-              <li>Step 3: Beat the Eggs</li>
-              <li>Step 4: Form a Well</li>
-              <li>Step 5: Add Eggs and Fold</li>
-            </ul>
+            <div className="card-check-dis">
+              <h2>Pasta</h2>
+              <p className="margin">
+                Executive Chef: This is the top chef in a kitchen, responsible
+                for creating the menu, managing the kitchen staff, ordering
+                supplies, and ensuring that the food is prepared to the highest
+                quality standards.
+              </p>
+              <ul className="margin">
+                <li>
+                  <samp className="bold">Step 1: </samp> Ingredients
+                </li>
+                <li>
+                  <samp className="bold">Step 2: </samp> Weigh the Flour
+                </li>
+                <li>
+                  <samp className="bold">Step 3: </samp> Beat the Eggs
+                </li>
+                <li>
+                  <samp className="bold">Step 4: </samp> Form a Well
+                </li>
+                <li>
+                  <samp className="bold">Step 5: </samp> Add Eggs and Fold
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="card">
+          <div className="card-check">
             <img src={viewRecipe.recipe2} alt="" />
-            <h2>chicken skewers</h2>
-            <p>
-              Executive Chef: This is the top chef in a kitchen, responsible for
-              creating the menu, managing the kitchen staff, ordering supplies,
-              and ensuring that the food is prepared to the highest quality
-              standards.
-            </p>
-            <ul>
-              <li>Step 1: Ingredients</li>
-              <li>Step 2: Weigh the Flour</li>
-              <li>Step 3: Beat the Eggs</li>
-              <li>Step 4: Form a Well</li>
-              <li>Step 5: Add Eggs and Fold</li>
-            </ul>
+            <div className="card-check-dis">
+              <h2 className="margin">chicken skewers</h2>
+              <p className="margin">
+                Executive Chef: This is the top chef in a kitchen, responsible
+                for creating the menu, managing the kitchen staff, ordering
+                supplies, and ensuring that the food is prepared to the highest
+                quality standards.
+              </p>
+              <ul className="margin">
+                <li>
+                  <samp className="bold">Step 1: </samp> Ingredients
+                </li>
+                <li>
+                  <samp className="bold">Step 2: </samp> Weigh the Flour
+                </li>
+                <li>
+                  <samp className="bold">Step 3: </samp> Beat the Eggs
+                </li>
+                <li>
+                  <samp className="bold">Step 4: </samp> Form a Well
+                </li>
+                <li>
+                  <samp className="bold">Step 5: </samp> Add Eggs and Fold
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="card">
+          <div className="card-check">
             <img src={viewRecipe.recipe3} alt="" />
-            <h2>Pasta</h2>
-            <p>
-              Executive Chef: This is the top chef in a kitchen, responsible for
-              creating the menu, managing the kitchen staff, ordering supplies,
-              and ensuring that the food is prepared to the highest quality
-              standards.
-            </p>
-            <ul>
-              <li>Step 1: Ingredients</li>
-              <li>Step 2: Weigh the Flour</li>
-              <li>Step 3: Beat the Eggs</li>
-              <li>Step 4: Form a Well</li>
-              <li>Step 5: Add Eggs and Fold</li>
-            </ul>
+            <div className="card-check-dis">
+              <h2>Vegetable Soup</h2>
+              <p className="margin">
+                Executive Chef: This is the top chef in a kitchen, responsible
+                for creating the menu, managing the kitchen staff, ordering
+                supplies, and ensuring that the food is prepared to the highest
+                quality standards.
+              </p>
+              <ul className="margin">
+                <li>
+                  <samp className="bold">Step 1: </samp> Ingredients
+                </li>
+                <li>
+                  <samp className="bold">Step 2: </samp> Weigh the Flour
+                </li>
+                <li>
+                  <samp className="bold">Step 3: </samp> Beat the Eggs
+                </li>
+                <li>
+                  <samp className="bold">Step 4: </samp> Form a Well
+                </li>
+                <li>
+                  <samp className="bold">Step 5: </samp> Add Eggs and Fold
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
