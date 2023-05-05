@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import { BsGoogle, BsGithub } from "react-icons/bs";
 import { AuthContext } from "../Providers/AuthProvider";
 
 const Register = () => {
+  const [error, setError] = useState("");
   const navigate = useNavigate();
   const { createUser, userUpdateIn } = useContext(AuthContext);
   const handleRegister = (event) => {
@@ -22,7 +23,8 @@ const Register = () => {
         navigate("/login");
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.message);
+        setError(error.message);
       });
   };
   return (
@@ -69,6 +71,7 @@ const Register = () => {
             </div>
             <br />
             <input type="submit" value="Submit" className="submit-btn" />
+            <h4 className="error">{error}</h4>
           </form>
         </div>
         <div className="g-g">

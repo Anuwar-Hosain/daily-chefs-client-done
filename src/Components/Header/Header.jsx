@@ -14,7 +14,6 @@ const Header = () => {
         console.log(error);
       });
   };
-  console.log(user);
   return (
     <>
       <section className="main-header">
