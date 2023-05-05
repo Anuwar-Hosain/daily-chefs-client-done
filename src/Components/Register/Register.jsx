@@ -7,7 +7,7 @@ import { AuthContext } from "../Providers/AuthProvider";
 const Register = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const { createUser, userUpdateIn, googleSingIn } = useContext(AuthContext);
+  const { createUser, githubSingIn, googleSingIn } = useContext(AuthContext);
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -30,6 +30,16 @@ const Register = () => {
 
   const handleGoogleSingIn = () => {
     googleSingIn()
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const handleGithubSingIn = () => {
+    githubSingIn()
       .then((result) => {
         console.log(result.user);
         navigate("/");
@@ -90,7 +100,7 @@ const Register = () => {
             <BsGoogle></BsGoogle>
             <h3>Google</h3>
           </div>
-          <div className="google">
+          <div className="google" onClick={handleGithubSingIn}>
             <BsGithub></BsGithub>
             <h3>Github</h3>
           </div>

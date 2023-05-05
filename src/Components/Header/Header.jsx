@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { BsPersonCircle } from "react-icons/bs";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
+import ActiveLink from "../ActiveLink/ActiveLink";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -26,10 +27,10 @@ const Header = () => {
           <div className="nav-items">
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <ActiveLink to="/">Home</ActiveLink>
               </li>
               <li>
-                <Link to="/blog">Blog</Link>
+                <ActiveLink to="/blog">Blog</ActiveLink>
               </li>
               <li>
                 {user && (

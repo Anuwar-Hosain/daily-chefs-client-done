@@ -32,3 +32,8 @@
   font-size: 32px;
   color: #231f20;
 }
+.active {
+  background-color: black;
+  padding: 2px 5px;
+  border-radius: 2px;
+}
