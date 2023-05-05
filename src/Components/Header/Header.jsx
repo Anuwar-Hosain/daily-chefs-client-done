@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsPersonCircle } from "react-icons/bs";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const Header = () => {
+  const { user } = useContext(AuthContext);
+  console.log(user);
   return (
     <>
       <section className="main-header">
@@ -22,12 +25,18 @@ const Header = () => {
                 <Link to="/blog">Blog</Link>
               </li>
               <li>
-                <Link to="/">
-                  <BsPersonCircle></BsPersonCircle>
-                </Link>
+                {user && (
+                  <Link to="/">
+                    <BsPersonCircle></BsPersonCircle>
+                  </Link>
+                )}
               </li>
               <li>
-                <Link to="/login">Login</Link>
+                {user ? (
+                  <Link to="/">Logout</Link>
+                ) : (
+                  <Link to="/login">Login</Link>
+                )}
               </li>
             </ul>
           </div>
