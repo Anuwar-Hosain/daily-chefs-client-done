@@ -12,8 +12,8 @@ const ChefCard = (props) => {
     number_of_recipes,
     likes,
     title,
+    code,
   } = props.chef;
-  console.log(props.chef);
   return (
     <div className="chef-card">
       <img src={chef_picture} alt="" className="chef-img" />
@@ -28,7 +28,7 @@ const ChefCard = (props) => {
       <h1 className="chef-title">{title}</h1>
       <h1 className="chef-name">Name:{chef_name}</h1>
       <div className="btn-view-chef">
-        <Link to="/" className="chef-btn">
+        <Link to={`/data/${code}`} className="chef-btn">
           View Recipe <BsArrowRight></BsArrowRight>
         </Link>
       </div>
