@@ -19,7 +19,6 @@ const ChefDetails = () => {
     viewRecipe,
     years_of_experience,
   } = chefData;
-  console.log(chefData);
 
   const handleFavBtn = () => {
     alert("Added to favorite ");

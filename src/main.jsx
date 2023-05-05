@@ -10,6 +10,7 @@ import Register from "./Components/Register/Register";
 import ChefDetails from "./Components/ChefDetails/ChefDetails";
 import AuthProvider from "./Components/Providers/AuthProvider";
 import PrivateRoute from "./PriveteRoute/PrivateRoute";
+import NotFound from "./Components/NotFound/NotFound";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/data/${params.id}`),
+      },
+      {
+        path: "*",
+        element: <NotFound></NotFound>,
       },
     ],
   },
