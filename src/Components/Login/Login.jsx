@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 
 const Login = () => {
+  const [error, setError] = useState("");
   const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -23,6 +24,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
+        setError(error.message);
       });
   };
   return (
@@ -53,6 +55,7 @@ const Login = () => {
             </div>
             <br />
             <input type="submit" value="Login" className="login-btn" />
+            <h4 className="error">{error}</h4>
           </form>
         </div>
       </div>
