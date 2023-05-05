@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./ChefDetails.css";
 import { useLoaderData } from "react-router-dom";
 import { BsFillHandThumbsUpFill, BsFillHeartFill } from "react-icons/bs";
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
 
 const ChefDetails = () => {
   const [favBtn, setFavBtn] = useState(false);
@@ -79,6 +81,7 @@ const ChefDetails = () => {
                   <samp className="bold">Step 5: </samp> Add Eggs and Fold
                 </li>
               </ul>
+              <Rating style={{ maxWidth: 180 }} value={rating} readOnly />
             </div>
           </div>
           <div className="card-check">
@@ -108,6 +111,7 @@ const ChefDetails = () => {
                   <samp className="bold">Step 5: </samp> Add Eggs and Fold
                 </li>
               </ul>
+              <Rating style={{ maxWidth: 180 }} value={2.8} readOnly />
             </div>
           </div>
           <div className="card-check">
@@ -137,6 +141,7 @@ const ChefDetails = () => {
                   <samp className="bold">Step 5: </samp> Add Eggs and Fold
                 </li>
               </ul>
+              <Rating style={{ maxWidth: 180 }} value={3} readOnly />
             </div>
           </div>
         </div>
