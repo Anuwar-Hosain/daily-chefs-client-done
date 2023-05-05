@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import "./Register.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsGoogle, BsGithub } from "react-icons/bs";
 import { AuthContext } from "../Providers/AuthProvider";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const { createUser, userUpdateIn } = useContext(AuthContext);
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -18,6 +19,7 @@ const Register = () => {
       .then((result) => {
         const createdUser = result.user;
         console.log(createdUser);
+        navigate("/login");
       })
       .catch((error) => {
         console.log(error);

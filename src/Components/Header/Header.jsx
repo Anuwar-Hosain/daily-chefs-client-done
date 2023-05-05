@@ -5,7 +5,15 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   console.log(user);
   return (
     <>
@@ -33,7 +41,9 @@ const Header = () => {
               </li>
               <li>
                 {user ? (
-                  <Link to="/">Logout</Link>
+                  <Link to="/" onClick={handleLogOut}>
+                    Logout
+                  </Link>
                 ) : (
                   <Link to="/login">Login</Link>
                 )}
